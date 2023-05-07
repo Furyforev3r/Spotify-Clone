@@ -1,0 +1,242 @@
+* {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+:root {
+/* color variables taken from https://open.spotify.com/!!! */
+    --background-base: #121212;
+    --background-highlight: #1a1a1a;
+    --background-press: #000;
+    --background-elevated-base: #242424;
+    --background-elevated-highlight: #2a2a2a;
+    --background-elevated-press: #000;
+    --background-tinted-base: hsla(0,0%,100%,.07);
+    --background-tinted-highlight: hsla(0,0%,100%,.1);
+    --background-tinted-press: hsla(0,0%,100%,.04);
+    --background-unsafe-for-small-text-base: #121212;
+    --background-unsafe-for-small-text-highlight: #121212;
+    --background-unsafe-for-small-text-press: #121212;
+    --text-base: #fff;
+    --text-subdued: #a7a7a7;
+    --text-bright-accent: #1ed760;
+    --text-negative: #f15e6c;
+    --text-warning: #ffa42b;
+    --text-positive: #1ed760;
+    --text-announcement: #3d91f4;
+    --essential-base: #fff;
+    --essential-subdued: #727272;
+    --essential-bright-accent: #1ed760;
+    --essential-negative: #e91429;
+    --essential-warning: #ffa42b;
+    --essential-positive: #1ed760;
+    --essential-announcement: #0d72ea;
+    --decorative-base: #fff;
+    --decorative-subdued: #292929;
+}
+
+body{
+    height: 100dvh;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: var(--background-base);
+	overflow-y: hidden;
+}
+
+aside {
+	background: #000;
+	display: flex;
+	flex-direction: column;
+	gap: 1.8rem;
+	max-height: 100%;
+	padding: 1.8rem;
+}
+
+.spotifyLogo {
+	width: 80%;
+	color: var(--text-base);
+}
+
+a {
+	color: var(--text-subdued);
+	font-size: 1.0em;
+	font-weight: bold;
+	cursor: pointer;
+	gap: 0.8rem;
+	padding: 0.1rem;
+}
+
+a:hover {
+	color: var(--text-base);
+	transform: 0.3s;
+}
+
+.asideItems {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.asideItems a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.createPlaylistIcon {
+	background: var(--text-subdued);
+	color: #000;
+    padding: 0.4rem;
+	border-radius: 0.3rem;
+}
+
+.playlistBar {
+	margin-top: 0.1rem;
+	padding-top: 1rem;
+	border-top: 0.1rem solid var(--background-elevated-highlight);
+}
+
+.likedMusicsIcon {
+    background: linear-gradient(135deg,#450af5,#c4efd9);
+    border-radius: 2px;
+    padding: 0.4rem;
+}
+
+.playlistContainer {
+	width: 100%;
+	height: 100%;
+    background-color: #3E3231;
+}
+
+header {
+	width: 100%;
+	height: 5%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	gap: 10rem;
+	margin-top: 1.5rem;
+}
+
+.headerButtons {
+	display: flex;
+	flex-direction: row;
+	gap: 1.0rem;
+}
+
+.headerButton {
+	cursor: pointer;
+	border: none;
+	width: 2.5rem;
+	height: 2.5rem;
+	background: var(--background-elevated-base);
+	color: var(--text-base);
+	font-size: 1rem;
+	border-radius: 50%;
+}
+
+.userProfile {
+	display: flex;
+	flex-direction: row;
+	align-items: center;	
+	background: var(--background-base);
+	padding: 0.5rem;
+	border-radius: 1rem;
+	color: var(--text-base);
+}
+
+.userProfileIcon {
+	color: var(--text-base);
+	background: var(--essential-subdued);
+	padding: 0.4rem;
+	border-radius: 50%;
+}
+
+main {
+	margin: 0.8rem;
+	margin-top: 4rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	gap: 1rem;
+}
+
+main img {
+    -webkit-box-shadow: 0 4px 60px rgba(0,0,0,.5);
+    box-shadow: 0 4px 60px rgba(0,0,0,.5);
+    width: 25%;
+    height: 25%;
+}
+
+h1, .playlistInfo, .playlistInfo a, .sectionInfo {
+	color: var(--text-base);
+	font-weight: bold;
+}
+
+.playlistDesc {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+ .playlistInfo a:hover {
+	color: var(--text-subdued);
+ }
+
+.playlistDescText {
+	color: var(--text-subdued);
+}
+
+.playlistItems {
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 2.3rem;
+	background: #201A1A;
+	padding: 1.8rem;
+}
+
+.buttonPlay {
+	display: grid;
+	place-items: center;
+	border: none;
+	background: #1ED760;
+	padding: 1.0rem;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.buttonMenu {
+	background: none;
+	border: none;
+	font-size: 3.5rem;
+	color: var(--text-subdued);
+	cursor: pointer;
+	display: grid;
+	place-items: center;
+}
+
+.buttonMenu:hover {
+	color: var(--text-base);
+	transition: 0.3s;
+}
+
+table {
+	width: 100%;
+}
+
+.musicsContainer {
+	padding: 0.8rem;
+	font-weight: bold;
+	color: var(--text-subdued);
+	background: var(--background-elevated-base);
+	height: 100%;
+}
