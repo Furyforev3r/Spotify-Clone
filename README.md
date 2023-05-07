@@ -1,5 +1,5 @@
 ![Spotify](https://www.zero3games.com.br/blog-media/wp-content/uploads/2019/03/Spotify-Banner.png)
-# 🎵 | Spotify-Clonet
+# 🎵 | Spotify-Clone
 + **A clone of the Spotify Playlist screen made using HTML/CSS!**
 ## 🎥 | Credits
 + **Man in the picture: Wilbur Soot**
